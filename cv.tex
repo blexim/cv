@@ -1,23 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% NOTE: If you find that it says                                     %%
-%%                                                                    %%
-%%                           1 of ??                                  %%
-%%                                                                    %%
-%% at the bottom of your first page, this means that the AUX file     %%
-%% was not available when you ran LaTeX on this source. Simply RERUN  %% 
-%% LaTeX to get the ``??'' replaced with the number of the last page  %% 
-%% of the document. The AUX file will be generated on the first run   %%
-%% of LaTeX and used on the second run to fill in all of the          %%
-%% references.                                                        %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Don't like 10pt? Try 11pt or 12pt
 \documentclass[10pt]{article}
 
 % This is a helpful package that puts math inside length specifications
@@ -51,20 +31,20 @@
 %
 
 %% Use these lines for letter-sized paper
-\usepackage[paper=letterpaper,
-            %includefoot, % Uncomment to put page number above margin
-            marginparwidth=1.2in,     % Length of section titles
-            marginparsep=.05in,       % Space between titles and text
-            margin=1in,               % 1 inch margins
-            includemp]{geometry}
+%\usepackage[paper=letterpaper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=1.2in,     % Length of section titles
+%            marginparsep=.05in,       % Space between titles and text
+%            margin=1in,               % 1 inch margins
+%            includemp]{geometry}
 
 %% Use these lines for A4-sized paper
-%\usepackage[paper=a4paper,
-%            %includefoot, % Uncomment to put page number above margin
-%            marginparwidth=30.5mm,    % Length of section titles
-%            marginparsep=1.5mm,       % Space between titles and text
-%            margin=25mm,              % 25mm margins
-%            includemp]{geometry}
+\usepackage[paper=a4paper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=30.5mm,    % Length of section titles
+            marginparsep=1.5mm,       % Space between titles and text
+            margin=25mm,              % 25mm margins
+            includemp]{geometry}
 
 %% More layout: Get rid of indenting throughout entire document
 \setlength{\parindent}{0in}
@@ -88,11 +68,11 @@
 \newlength{\footpageshift}
 \setlength{\footpageshift}
           {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
-\lfoot{\hspace{\footpageshift}%
-       \parbox{4in}{\, \hfill %
-                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%\lfoot{\hspace{\footpageshift}%
+%       \parbox{4in}{\, \hfill %
+%                    \arabic{page} of \protect\pageref*{LastPage} % +LP
 %                    \arabic{page}                               % -LP
-                    \hfill \,}}
+%                    \hfill \,}}
 
 % Finally, give us PDF bookmarks
 \usepackage{color,hyperref}
@@ -259,7 +239,7 @@ and roll out the patch.
         I spent a summer doing research with the Security Group.  We analysed a widely used, commercial wireless sensor network system, and discovered several vulnerabilities.
         Our results were published at ACNS.  This work involved, among other things, writing assembly language for the microcontrollers on ``smart dust'' sensors
 	\end{innerlist}
-
+	
 	\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
 		\href{http://www.trustmatta.com/}{\textbf{Matta Security Consulting}}  &
         		\hfill {October 2004 to June 2007} \\
@@ -293,7 +273,7 @@ and roll out the patch.
 \textbf{Security Advisories}
 \begin{enumerate}
 
-\item Integer overflow in Subversion client and server, CVE-2009-2411.
+\item Heap overflow in Subversion client and server, CVE-2009-2411.
 \item Integer overflow in APR-util library, CVE-2009-2412.
 \item Heap Overflow in MPlayer, BID-10008.
 \item Heap Overflow in X11 X Server, CVE-2003-0730.
@@ -324,6 +304,11 @@ fairly large programs (around 10k lines) in F$\sharp$, C$\sharp$ and OCaml.  I h
 I have a lot of experience with application security assessment, and am also proficient
 at network-level and host-level security assessment.  
 
+\section{Other Skills}
+I do quite a lot of public speaking, and have given presentations to audiences of 100+ people.
+I have taught undergraduate and post-graduate courses at the University of Oxford, which
+includes tutoring small groups of students.
+
 \section{Open Source Projects}
 I am one of the main contributors to the \href{http://www.cprover.org/cbmc/}{\sc CBMC} and
 \href{http://www.cprover.org/svn/wolverine/trunk/}{\sc Wolverine} model checkers,
@@ -331,66 +316,6 @@ as well as the \href{http://www.cprover.org/kalashnikov/}{\sc Kalashnikov} progr
 
 These tools can be found at \verb|http://www.cprover.org/{cbmc,svn/wolverine,kalashnikov}|
 respectively.
-
-%\section{Technical Skills} 
-%%
-%Extensive hardware and software experience in networking and
-%        information technology
-
-%\blankline
-
-%\href{http://www.mathworks.com/products/matlab/}{\textsc{Matlab}} 
-%        experience: linear algebra, Fourier transforms,
-%        nonlinear numerical methods, polynomials, statistics,
-%        visualization
-
-%\blankline
-
-%\href{http://www.mathworks.com/products/matlab/}{\textsc{Matlab}} 
-%        toolboxes: communications, control system, filter
-%        design, genetic algorithm and direct search, signal processing,
-%        system identification
-
-%\blankline
-
-%Instrumentation and Control: 
-%        \href{http://www.dspaceinc.com/}{dSPACE} hardware and software,
-%        \href{http://www.mathworks.com/products/simulink/}{Simulink}, 
-%        \href{http://www.ni.com/}{LabVIEW} and other 
-%        \href{http://www.ni.com}{National Instruments} 
-%        control and data acquisition hardware and software
-
-%\blankline
-
-%Programming: C, C++, Pascal, Perl, PHP, Lisp, UNIX shell scripting, SQL,
-%        RCS, CVS, SVN, and others
-
-%\blankline
-
-%Applications: \TeX{}, \LaTeX{}, B\textsc{ib}\TeX{}, Microsoft Office,
-%        and other common productivity packages for Windows, OS X, and
-%        Linux platforms
-
-%\blankline
-
-%Operating Systems: Microsoft Windows XP/2000, Apple OS X, Linux, BSD,
-%        IRIX, AIX, Solaris, and other UNIX variants
-
-%\section{Mathematical Expertise} 
-%%
-%Linear and Nonlinear Systems Theory
-
-%\blankline
-
-%Probability, Random Variables, and Stochastic Processes 
-
-%\blankline
-
-%Dynamic Optimization
-
-%\blankline
-
-%Game Theory
 
 \end{document}
 
